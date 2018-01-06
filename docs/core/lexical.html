@@ -218,8 +218,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x8BCD;&#x6C47;&#x7ED3;&#x6784;-lexical-structure">&#x8BCD;&#x6C47;&#x7ED3;&#x6784; Lexical Structure</h2>
-<p>&#x8BCD;&#x6C47;&#x7ED3;&#x6784;&#x8868;&#x793A;&#x67D0;&#x4E00;&#x8BED;&#x8A00;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#xFF0C;&#x6BD4;&#x5982;&#x53D8;&#x91CF;&#x540D;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#xFF0C;&#x6CE8;&#x91CA;&#x5206;&#x9694;&#x7B26;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8BED;&#x53E5;&#x4E4B;&#x95F4;&#x5982;&#x4F55;&#x5206;&#x9694;&#xFF1F;</p>
+                                <h2 id="&#x8BCD;&#x6C47;&#x7ED3;&#x6784;">&#x8BCD;&#x6C47;&#x7ED3;&#x6784;</h2>
+<p>&#x8BCD;&#x6C47;&#x7ED3;&#x6784;&#xFF08;Lexical Structure&#xFF09;&#x8868;&#x793A;&#x67D0;&#x4E00;&#x8BED;&#x8A00;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#xFF0C;&#x6BD4;&#x5982;&#x53D8;&#x91CF;&#x540D;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#xFF0C;&#x6CE8;&#x91CA;&#x5206;&#x9694;&#x7B26;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8BED;&#x53E5;&#x4E4B;&#x95F4;&#x5982;&#x4F55;&#x5206;&#x9694;&#xFF1F;</p>
+<h3 id="&#x5B57;&#x7B26;&#x96C6;">&#x5B57;&#x7B26;&#x96C6;</h3>
+<p>ES3 &#x89C4;&#x8303;&#x8981;&#x6C42;&#x652F;&#x6301; Unicode v2.1+ &#x5B57;&#x7B26;&#x96C6;&#xFF0C;ES5 &#x652F;&#x6301; Unicode v3+ &#x5B57;&#x7B26;&#x96C6;&#x3002;</p>
+<p>JS &#x4E2D;&#x7684;&#x7A7A;&#x767D;&#x7B26;&#x53F7;&#x5305;&#x62EC;&#xFF1A;&#x666E;&#x901A;&#x7A7A;&#x683C;&#xFF08;<code>\u0020</code>&#xFF09;&#xFF0C;&#x5236;&#x8868;&#x7B26;&#xFF08;<code>\u0009</code>&#xFF09;&#xFF0C;&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;&#xFF08;<code>\u000B</code>&#xFF09;&#xFF0C;&#x6362;&#x9875;&#x7B26;&#xFF08;<code>\u000C</code>&#xFF09;&#xFF0C;&#x975E;&#x6362;&#x884C;&#x7A7A;&#x683C;&#xFF08;<code>\u00A0</code>&#xFF09;&#xFF0C;&#x5B57;&#x8282;&#x987A;&#x5E8F;&#x6807;&#x8BB0;&#xFF08;<code>\uFEFF</code>&#xFF09;&#xFF0C;&#x4EE5;&#x53CA; Unicode Z &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x3002;</p>
+<p>JS &#x5C06;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x5F53;&#x4F5C;&#x884C;&#x7ED3;&#x675F;&#x7B26;&#xFF1A;&#x6362;&#x884C;&#x7B26;&#xFF08;<code>\u000A</code>&#xFF09;&#xFF0C;&#x56DE;&#x8F66;&#xFF08;<code>\u000D</code>&#xFF09;&#xFF0C;&#x884C;&#x5206;&#x9694;&#x7B26;&#xFF08;<code>\u2028</code>&#xFF09;&#xFF0C;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#xFF08;<code>\u2029</code>&#xFF09;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5C1A;&#x672A;&#x652F;&#x6301; Unicode &#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x53EF;&#x4F7F;&#x7528; Unicode &#x8F6C;&#x6362;&#x7801;&#x8868;&#x793A; Unicode &#x5B57;&#x7B26;&#x3002;&#x5373;&#x7528; 6 &#x4E2A; ASCII &#x5B57;&#x7B26;&#x8868;&#x793A;&#x4EFB;&#x610F;&#x4E00;&#x4E2A; 16 &#x4F4D; Unicode &#x7801;&#x70B9;&#xFF08;codepoint&#xFF09;&#xFF1A;<code>\u</code> &#x5F00;&#x5934;&#xFF0C;&#x540E;&#x8DDF; 4 &#x4E2A; 16 &#x8FDB;&#x5236;&#x6570;&#x5B57;&#x3002;&#x6BD4;&#x5982; <code>&#xE9;</code> &#x7684; Unicode &#x8F6C;&#x6362;&#x7801;&#x662F; <code>\u00E9</code>&#xFF0C;&#x56E0;&#x800C;&#x5982;&#x4E0B;&#x4E24;&#x5B57;&#x7B26;&#x76F8;&#x7B49;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&quot;caf&#xE9;&quot;</span> === <span class="hljs-string">&quot;caf\u00E9&quot;</span> <span class="hljs-comment">// =&gt; true</span>
+</code></pre>
+<h3 id="&#x6807;&#x8BC6;&#x7B26;&#x548C;&#x5173;&#x952E;&#x5B57;">&#x6807;&#x8BC6;&#x7B26;&#x548C;&#x5173;&#x952E;&#x5B57;</h3>
 
                                 
                                 </section>
@@ -263,7 +271,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"词汇结构","level":"1.2.1","depth":2,"next":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"previous":{"title":"语言核心","level":"1.2","depth":1,"path":"core/README.md","ref":"core/README.md","articles":[{"title":"词汇结构","level":"1.2.1","depth":2,"path":"core/lexical.md","ref":"core/lexical.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/lexical.md","mtime":"2018-01-05T16:46:57.504Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-05T16:33:08.587Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"词汇结构","level":"1.2.1","depth":2,"next":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"previous":{"title":"语言核心","level":"1.2","depth":1,"path":"core/README.md","ref":"core/README.md","articles":[{"title":"词汇结构","level":"1.2.1","depth":2,"path":"core/lexical.md","ref":"core/lexical.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"core/lexical.md","mtime":"2018-01-06T02:57:38.890Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-06T02:57:49.780Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -271,10 +279,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
