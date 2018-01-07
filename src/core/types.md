@@ -6,8 +6,4 @@ JS 类型可分为两个目录：基本类型（`primitive types`）和对象类
 
 ### Numbers
 
-JavaScript 里的数字均为 64 位浮点数，其遵循 IEEE 754 标准。最大可至 
-
-$$
-a + b = c
-$$
+JavaScript 里的数字均为 64 位浮点数，其遵循 IEEE 754 标准。最大可至 $$\pm1.7976931348623157 \times 10^{308}$$，最小可达 $$\pm5\times10^{-324}$$。
