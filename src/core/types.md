@@ -1,8 +1,10 @@
 ## 类型、数值和变量
 
-JS 类型可分为两个目录：基本类型（`primitive types`）和对象类型（`object types`）。
+JS 类型可分两种：基本类型（`primitive types`）和对象类型（`object types`）。
 
 基本类型包括 number, string, boolean, null, undefined。
+
+其余皆为对象类型。
 
 ### Numbers
 
@@ -30,4 +32,34 @@ Number.MAX_VALUE         // => 1.7976931348623157e+308
 Number.MIN_VALUE         // => 5e-324
 Number.NaN               // => NaN
 1/Number.POSITIVE_INFINITY // => 0
+```
+
+`NaN` 有个特殊本领，和任意类型都不相等，包括自己：
+
+```javascript
+NaN === NaN // => false
+NaN != NaN  // => true
+```
+
+因此，不能利用 `x == NaN` 检测 x 是否 NaN，而要使用 `x != x` 。
+
+全局函数 `isNaN()` 可检测 NaN 是否存在。当参数是非数值类型（比如字符串或对象）时，`isNaN()` 亦为真。
+
+相关的函数 `isFinite()` 只有参数为数值类型，并且不是 `NaN`, `Infinity` 或 `-Infinity` 时才为真。
+
+负零也有一特殊本领，它与正零严格相等，除了当作分母时：
+
+```javascript
+var zero = 0
+var negz = -0
+zero === negz     // => true
+1/zero === 1/negz // => false, 正无穷不等于负无穷
+```
+
+JS 使用的 IEEE-754 规范只能精确表示某些浮点数，比如：$$1/2$$, $$1/4$$, $$1/1024$$ 等。对于其他的浮点数，会有精确度的损失，这在日常使用中会造成误差。比如：
+
+```javascript
+var x = .3 - .2
+x       // => 0.09999999999999998
+x == .1 // => false
 ```
