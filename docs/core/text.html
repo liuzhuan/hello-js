@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>客户端 JS · GitBook</title>
+        <title>文本 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../server/" />
+    <link rel="next" href="../client/" />
     
     
-    <link rel="prev" href="../core/text.html" />
+    <link rel="prev" href="types.html" />
     
 
     </head>
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../core/">
+        <li class="chapter " data-level="1.2" data-path="./">
             
-                <a href="../core/">
+                <a href="./">
             
                     
                     语言核心
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../core/lexical.html">
+        <li class="chapter " data-level="1.2.1" data-path="lexical.html">
             
-                <a href="../core/lexical.html">
+                <a href="lexical.html">
             
                     
                     词汇结构
@@ -133,9 +133,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../core/types.html">
+        <li class="chapter " data-level="1.2.2" data-path="types.html">
             
-                <a href="../core/types.html">
+                <a href="types.html">
             
                     
                     类型、数值和变量
@@ -147,9 +147,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="../core/types.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="types.html">
             
-                <a href="../core/types.html#numbers">
+                <a href="types.html#numbers">
             
                     
                     Numbers
@@ -160,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.2" data-path="../core/text.html">
+        <li class="chapter active" data-level="1.2.2.2" data-path="text.html">
             
-                <a href="../core/text.html">
+                <a href="text.html">
             
                     
                     文本
@@ -183,9 +183,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../client/">
             
-                <a href="./">
+                <a href="../client/">
             
                     
                     客户端 JS
@@ -252,7 +252,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >客户端 JS</a>
+        <a href=".." >文本</a>
     </h1>
 </div>
 
@@ -267,7 +267,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5BA2;&#x6237;&#x7AEF;-js">&#x5BA2;&#x6237;&#x7AEF; JS</h1>
+                                <h2 id="&#x6587;&#x672C;">&#x6587;&#x672C;</h2>
+<p>JS &#x7684;&#x6587;&#x672C;&#x4F7F;&#x7528; string &#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x8868;&#x793A; 16-bit &#x5B57;&#x7B26;&#x7684;&#x5E8F;&#x5217;&#x3002;string &#x7684;&#x957F;&#x5EA6;&#x4EE3;&#x8868; 16-bit &#x5B57;&#x7B26;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p>JS &#x4F7F;&#x7528; UTF-16 &#x7F16;&#x7801;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;string &#x4E3A;&#x4E00;&#x7CFB;&#x5217;&#x65E0;&#x7B26;&#x53F7; 16-bit &#x6570;&#x503C;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684; Unicode &#x5B57;&#x7B26;&#xFF08;&#x6765;&#x81EA; <code>Basic Multilingual Plane</code> <strong>&#x57FA;&#x672C;&#x591A;&#x8BED;&#x79CD;&#x5E73;&#x9762;</strong>&#x7684;&#x5B57;&#x7B26;&#xFF09;&#x7684;&#x7801;&#x70B9;&#x7528;&#x4E00;&#x4E2A; 16-bit &#x8868;&#x793A;&#x8DB3;&#x77E3;&#x3002;&#x6709;&#x7684; Unicode &#x5B57;&#x7B26;&#x7801;&#x70B9;&#x8D85;&#x8FC7; 16-bit&#xFF0C;&#x6309;&#x7167; UTF-16 &#x7F16;&#x7801;&#x89C4;&#x5219;&#xFF0C;&#x9700;&#x7528;&#x4E24;&#x4E2A; 16-bit &#x5B57;&#x7B26;&#x8868;&#x793A;&#xFF0C;&#x79F0;&#x4E4B;&#x4E3A;<strong>&#x4EE3;&#x7406;&#x5BF9;</strong>(<code>surrogate pair</code>)&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x957F;&#x5EA6;&#x4E3A; 2 &#x7684; string&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x8868;&#x793A;&#x7684;&#x662F;&#x4E00;&#x4E2A; Unicode &#x5B57;&#x7B26;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> p = <span class="hljs-string">&apos;&#x3C0;&apos;</span> <span class="hljs-comment">// &#x3C0; &#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x7801;&#x70B9;&#x4E3A; 0x03c0</span>
+<span class="hljs-keyword">var</span> e = <span class="hljs-string">&apos;&#x1D452;&apos;</span> <span class="hljs-comment">// &#x1D452; &#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x7801;&#x70B9;&#x662F; 0x1d452</span>
+p.length    <span class="hljs-comment">// =&gt; 1</span>
+e.length    <span class="hljs-comment">// =&gt; 2, UTF-16 &#x7F16;&#x7801;&#x662F;&#x4E24;&#x4E2A; 16-bit &#x6570;&#x503C;&#xFF1A;&quot;\ud835\udc52&quot;</span>
+</code></pre>
+<h3 id="js-&#x7684;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;">JS &#x7684;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</h3>
+<p>&#x8F6C;&#x4E49;&#x5B57;&#x7B26; <code>/</code> &#x80FD;&#x8D4B;&#x4E88;&#x666E;&#x901A;&#x5B57;&#x7B26;&#x65B0;&#x7684;&#x542B;&#x4E49;&#x3002;&#x9664;&#x4E86;&#x5E38;&#x89C1;&#x7684; <code>\n</code>, <code>\t</code> &#x5916;&#xFF0C;<code>\x XX</code> &#x8868;&#x793A;&#x4E24;&#x4E2A; 16 &#x8FDB;&#x5236;&#x5B57;&#x7B26; <code>XX</code> &#x4EE3;&#x8868;&#x7684; Latin-1 &#x5B57;&#x7B26;&#x3002;<code>\u XXXX</code> &#x8868;&#x793A; 4 &#x4E2A; 16 &#x8FDB;&#x5236;&#x5B57;&#x7B26; <code>XXXX</code> &#x4EE3;&#x8868;&#x7684; Unicode &#x5B57;&#x7B26;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;\xA9&apos;</span>      <span class="hljs-comment">// =&gt; &#xA9;</span>
+<span class="hljs-string">&apos;\u03c0&apos;</span>    <span class="hljs-comment">// =&gt; &#x3C0;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -295,12 +308,12 @@
 
             
                 
-                <a href="../core/text.html" class="navigation navigation-prev " aria-label="Previous page: 文本">
+                <a href="types.html#numbers" class="navigation navigation-prev " aria-label="Previous page: Numbers">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../server/" class="navigation navigation-next " aria-label="Next page: 服务端 JS">
+                <a href="../client/" class="navigation navigation-next " aria-label="Next page: 客户端 JS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -311,7 +324,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"客户端 JS","level":"1.3","depth":1,"next":{"title":"服务端 JS","level":"1.4","depth":1,"path":"server/README.md","ref":"server/README.md","articles":[]},"previous":{"title":"文本","level":"1.2.2.2","depth":3,"path":"core/text.md","ref":"core/text.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"client/README.md","mtime":"2018-01-05T16:33:55.774Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-08T15:31:08.974Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文本","level":"1.2.2.2","depth":3,"next":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"previous":{"title":"Numbers","level":"1.2.2.1","depth":3,"anchor":"#numbers","path":"core/types.md","ref":"core/types.md#numbers","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/text.md","mtime":"2018-01-08T15:29:18.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-08T15:31:08.974Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
