@@ -281,6 +281,28 @@ e.length    <span class="hljs-comment">// =&gt; 2, UTF-16 &#x7F16;&#x7801;&#x662
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;\xA9&apos;</span>      <span class="hljs-comment">// =&gt; &#xA9;</span>
 <span class="hljs-string">&apos;\u03c0&apos;</span>    <span class="hljs-comment">// =&gt; &#x3C0;</span>
 </code></pre>
+<h3 id="&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;">&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;</h3>
+<p>JS &#x5185;&#x7F6E;&#x4E86;&#x5F88;&#x591A;&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;hello, world&apos;</span>
+s.charAt(<span class="hljs-number">0</span>)
+s.charCodeAt(<span class="hljs-number">0</span>)
+s.substring(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>) <span class="hljs-comment">// &#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5230;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;</span>
+s.slice(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>)     <span class="hljs-comment">// &#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5230;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x662F;&#x8D1F;&#x6570;</span>
+s.indexOf(<span class="hljs-string">&apos;l&apos;</span>)    <span class="hljs-comment">// =&gt; 2</span>
+s.indexOf(<span class="hljs-string">&apos;l&apos;</span>, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; 3</span>
+</code></pre>
+<h3 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<p>JS &#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>RegExp()</code> &#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B57;&#x9762;&#x91CF; <code>/regexp/</code> &#x521B;&#x5EFA;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p>RegExp &#x548C; string &#x5B9A;&#x4E49;&#x4E86;&#x5F88;&#x591A;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;testing: 1, 2, 3&apos;</span>
+<span class="hljs-keyword">var</span> pattern = <span class="hljs-regexp">/\d+/g</span>
+pattern.exec(text)  <span class="hljs-comment">// =&gt; [&apos;1&apos;, index:9, input: &apos;testing: 1, 2, 3&apos;]</span>
+pattern.test(text)      <span class="hljs-comment">// =&gt; true</span>
+text.search(pattern)    <span class="hljs-comment">// =&gt; 9, &#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x4F4D;&#x7F6E;</span>
+text.match(pattern)     <span class="hljs-comment">// =&gt; [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;]</span>
+text.replace(pattern, <span class="hljs-string">&apos;#&apos;</span>)  <span class="hljs-comment">// =&gt; &apos;testing: #, #, #&apos;</span>
+text.split(<span class="hljs-regexp">/\D+/</span>)   <span class="hljs-comment">// =&gt; [&apos;&apos;, &apos;1&apos;, &apos;2&apos;, &apos;3&apos;]</span>
+</code></pre>
 
                                 
                                 </section>
@@ -324,7 +346,7 @@ e.length    <span class="hljs-comment">// =&gt; 2, UTF-16 &#x7F16;&#x7801;&#x662
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文本","level":"1.2.2.2","depth":3,"next":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"previous":{"title":"Numbers","level":"1.2.2.1","depth":3,"anchor":"#numbers","path":"core/types.md","ref":"core/types.md#numbers","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/text.md","mtime":"2018-01-08T15:29:18.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-08T15:31:08.974Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文本","level":"1.2.2.2","depth":3,"next":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"previous":{"title":"Numbers","level":"1.2.2.1","depth":3,"anchor":"#numbers","path":"core/types.md","ref":"core/types.md#numbers","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/text.md","mtime":"2018-01-09T00:18:38.053Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-08T23:52:49.520Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -332,6 +354,10 @@ e.length    <span class="hljs-comment">// =&gt; 2, UTF-16 &#x7F16;&#x7801;&#x662
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

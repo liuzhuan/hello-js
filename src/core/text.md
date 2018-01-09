@@ -21,3 +21,34 @@ e.length    // => 2, UTF-16 编码是两个 16-bit 数值："\ud835\udc52"
 '\xA9'      // => ©
 '\u03c0'    // => π
 ```
+
+### 处理字符串
+
+JS 内置了很多字符串处理函数，比如：
+
+```javascript
+var s = 'hello, world'
+s.charAt(0)
+s.charCodeAt(0)
+s.substring(1, 4) // 起始位置到结束位置
+s.slice(1, 4)     // 起始位置到结束位置，位置可以是负数
+s.indexOf('l')    // => 2
+s.indexOf('l', 3) // => 3
+```
+
+### 正则表达式
+
+JS 可以使用 `RegExp()` 构造函数，也可以使用字面量 `/regexp/` 创建正则表达式。
+
+RegExp 和 string 定义了很多模式匹配的方法：
+
+```javascript
+var text = 'testing: 1, 2, 3'
+var pattern = /\d+/g
+pattern.exec(text)  // => ['1', index:9, input: 'testing: 1, 2, 3']
+pattern.test(text)      // => true
+text.search(pattern)    // => 9, 第一个匹配位置
+text.match(pattern)     // => ['1', '2', '3']
+text.replace(pattern, '#')  // => 'testing: #, #, #'
+text.split(/\D+/)   // => ['', '1', '2', '3']
+```
