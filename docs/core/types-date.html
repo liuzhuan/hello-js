@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>全局对象 · GitBook</title>
+        <title>Date · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../client/" />
+    <link rel="next" href="types-null_undefined.html" />
     
     
-    <link rel="prev" href="types-null_undefined.html" />
+    <link rel="prev" href="types-boolean.html" />
     
 
     </head>
@@ -186,7 +186,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.4" data-path="types-date.html">
+        <li class="chapter active" data-level="1.2.2.4" data-path="types-date.html">
             
                 <a href="types-date.html">
             
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2.6" data-path="types-global.html">
+        <li class="chapter " data-level="1.2.2.6" data-path="types-global.html">
             
                 <a href="types-global.html">
             
@@ -304,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >全局对象</a>
+        <a href=".." >Date</a>
     </h1>
 </div>
 
@@ -319,15 +319,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5168;&#x5C40;&#x5BF9;&#x8C61;">&#x5168;&#x5C40;&#x5BF9;&#x8C61;</h2>
-<p>&#x5F53; JS &#x89E3;&#x91CA;&#x5668;&#x542F;&#x52A8;&#xFF0C;&#x6216;&#x6D4F;&#x89C8;&#x5668;&#x5F00;&#x59CB;&#x52A0;&#x8F7D;&#x65B0;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5305;&#x62EC;&#x5982;&#x4E0B;&#x521D;&#x59CB;&#x5C5E;&#x6027;&#xFF1A;</p>
-<ul>
-<li>&#x5168;&#x5C40;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982; <code>undefined</code>, <code>Infinity</code>, <code>NaN</code></li>
-<li>&#x5168;&#x5C40;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982; <code>isNaN()</code>, <code>parseInt()</code>, <code>eval()</code></li>
-<li>&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982; <code>Date()</code>, <code>RegExp()</code>, <code>String()</code>, <code>Object()</code>, <code>Array()</code></li>
-<li>&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982; <code>Math</code> &#x548C; <code>JSON</code></li>
-</ul>
-<p>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x51FD;&#x6570;&#x4E5F;&#x4F1A;&#x4F5C;&#x4E3A;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+                                <h2 id="date-&#x5BF9;&#x8C61;">Date &#x5BF9;&#x8C61;</h2>
+<p>Date &#x8868;&#x793A;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#x3002;&#x4F7F;&#x7528; Date &#x65F6;&#xFF0C;&#x8981;&#x7262;&#x8BB0;&#x65F6;&#x533A;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5BB9;&#x6613;&#x4F1A;&#x9020;&#x6210;&#x4E00;&#x4E9B;&#x7591;&#x60D1;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;Date &#x7684;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x662F; 1970 &#x5E74; 1 &#x6708; 1 &#x65E5; 0 &#x70B9; 0 &#x5206; 0 &#x79D2;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1970</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+now.valueOf() <span class="hljs-comment">// =&gt; -28800000&#xFF08;&#x5047;&#x8BBE;&#x4F60;&#x5728;&#x4E1C;&#x516B;&#x533A;&#x6267;&#x884C;&#x8BE5;&#x4EE3;&#x7801;&#xFF09;</span>
+</code></pre>
+<p>&#x5E76;&#x6CA1;&#x6709;&#x5982;&#x60F3;&#x8C61;&#x822C;&#x8FD4;&#x56DE; 0&#xFF0C;&#x95EE;&#x9898;&#x51FA;&#x5728;&#x54EA;&#x513F;&#xFF1F;</p>
+<p>&#x56E0;&#x4E3A; Date &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x65F6;&#x533A;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x662F;&#x4E1C;&#x516B;&#x533A;&#x7684; 1970 &#x5E74; 1 &#x6708; 1 &#x65E5; 0 &#x70B9; 0 &#x5206;&#xFF0C;&#x6362;&#x7B97;&#x5230; 0 &#x65F6;&#x533A;&#xFF0C;&#x8981;&#x56DE;&#x8C03; 8 &#x5C0F;&#x65F6;&#xFF0C;&#x5373; 1969 &#x5E74; 12 &#x6708; 31 &#x65E5; 16 &#x65F6; 0 &#x5206;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x8FD4;&#x56DE;&#x8D1F;&#x503C;&#x3002;</p>
 
                                 
                                 </section>
@@ -355,12 +354,12 @@
 
             
                 
-                <a href="types-null_undefined.html" class="navigation navigation-prev " aria-label="Previous page: null 和 undefined">
+                <a href="types-boolean.html" class="navigation navigation-prev " aria-label="Previous page: Boolean">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../client/" class="navigation navigation-next " aria-label="Next page: 客户端 JS">
+                <a href="types-null_undefined.html" class="navigation navigation-next " aria-label="Next page: null 和 undefined">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -371,7 +370,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"全局对象","level":"1.2.2.6","depth":3,"next":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"previous":{"title":"null 和 undefined","level":"1.2.2.5","depth":3,"path":"core/types-null_undefined.md","ref":"core/types-null_undefined.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/types-global.md","mtime":"2018-01-13T10:46:17.474Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T12:01:31.407Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Date","level":"1.2.2.4","depth":3,"next":{"title":"null 和 undefined","level":"1.2.2.5","depth":3,"path":"core/types-null_undefined.md","ref":"core/types-null_undefined.md","articles":[]},"previous":{"title":"Boolean","level":"1.2.2.3","depth":3,"path":"core/types-boolean.md","ref":"core/types-boolean.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/types-date.md","mtime":"2018-01-13T11:28:59.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T12:01:31.407Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

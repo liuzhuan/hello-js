@@ -7,6 +7,7 @@
         - [Numbers](core/types.md#numbers)
         - [文本](core/text.md)
         - [Boolean](core/types-boolean.md)
+        - [Date](core/types-date.md)
         - [null 和 undefined](core/types-null_undefined.md)
         - [全局对象](core/types-global.md)
 - [客户端 JS](client/README.md)
