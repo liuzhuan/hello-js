@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>服务端 JS · GitBook</title>
+        <title>null 和 undefined · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../REF.html" />
+    <link rel="next" href="types-global.html" />
     
     
-    <link rel="prev" href="../client/" />
+    <link rel="prev" href="types-boolean.html" />
     
 
     </head>
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../core/">
+        <li class="chapter " data-level="1.2" data-path="./">
             
-                <a href="../core/">
+                <a href="./">
             
                     
                     语言核心
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../core/lexical.html">
+        <li class="chapter " data-level="1.2.1" data-path="lexical.html">
             
-                <a href="../core/lexical.html">
+                <a href="lexical.html">
             
                     
                     词汇结构
@@ -133,9 +133,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../core/types.html">
+        <li class="chapter " data-level="1.2.2" data-path="types.html">
             
-                <a href="../core/types.html">
+                <a href="types.html">
             
                     
                     类型、数值和变量
@@ -147,9 +147,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="../core/types.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="types.html">
             
-                <a href="../core/types.html#numbers">
+                <a href="types.html#numbers">
             
                     
                     Numbers
@@ -160,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.2" data-path="../core/text.html">
+        <li class="chapter " data-level="1.2.2.2" data-path="text.html">
             
-                <a href="../core/text.html">
+                <a href="text.html">
             
                     
                     文本
@@ -173,9 +173,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.3" data-path="../core/types-boolean.html">
+        <li class="chapter " data-level="1.2.2.3" data-path="types-boolean.html">
             
-                <a href="../core/types-boolean.html">
+                <a href="types-boolean.html">
             
                     
                     Boolean
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.4" data-path="../core/types-null_undefined.html">
+        <li class="chapter active" data-level="1.2.2.4" data-path="types-null_undefined.html">
             
-                <a href="../core/types-null_undefined.html">
+                <a href="types-null_undefined.html">
             
                     
                     null 和 undefined
@@ -199,9 +199,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.5" data-path="../core/types-global.html">
+        <li class="chapter " data-level="1.2.2.5" data-path="types-global.html">
             
-                <a href="../core/types-global.html">
+                <a href="types-global.html">
             
                     
                     全局对象
@@ -235,9 +235,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../server/">
             
-                <a href="./">
+                <a href="../server/">
             
                     
                     服务端 JS
@@ -291,7 +291,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >服务端 JS</a>
+        <a href=".." >null 和 undefined</a>
     </h1>
 </div>
 
@@ -306,7 +306,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x670D;&#x52A1;&#x5668;&#x7AEF;-js">&#x670D;&#x52A1;&#x5668;&#x7AEF; JS</h1>
+                                <h2 id="null-&#x548C;-undefined">null &#x548C; undefined</h2>
+<p><code>null</code> &#x662F;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x7A7A;&#x6570;&#x503C;&#x3002;&#x4F7F;&#x7528; <code>typeof</code> &#x68C0;&#x6D4B;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE; <code>object</code>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span> <span class="hljs-comment">// =&gt; object</span>
+</code></pre>
+<p><code>undefined</code> &#x8868;&#x793A;&#x66F4;&#x6DF1;&#x5C42;&#x6B21;&#x7684;&#x201C;&#x7A7A;&#x201D;&#x3002;&#x53EF;&#x8868;&#x793A;&#x5C1A;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x503C;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#xFF0C;&#x6216;&#x6CA1;&#x6709; <code>return</code> &#x8BED;&#x53E5;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7B49;&#x3002;&#x548C; <code>null</code> &#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x975E;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
+<p>ES3 &#x4E2D;&#xFF0C;<code>undefined</code> &#x53EF;&#x5199;&#xFF0C;&#x80FD;&#x591F;&#x88AB;&#x66FF;&#x6362;&#x6210;&#x4EFB;&#x610F;&#x503C;&#x3002;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x5728; ES5 &#x4E2D;&#x5F97;&#x5230;&#x4FEE;&#x6B63;&#xFF0C;&#x53D8;&#x4E3A;&#x53EA;&#x8BFB;&#x3002;</p>
+<p><code>undefined</code> &#x7684;&#x7C7B;&#x578B;&#x662F; <code>undefined</code>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">undefined</span> <span class="hljs-comment">// =&gt; undefined</span>
+</code></pre>
+<p>&#x5C3D;&#x7BA1;&#x7565;&#x6709;&#x4E0D;&#x540C;&#xFF0C;&#x4E24;&#x8005;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x4E92;&#x7528;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x76F8;&#x7B49;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97; <code>==</code> &#x8BA4;&#x4E3A;&#x4ED6;&#x4FE9;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-literal">null</span> == <span class="hljs-literal">undefined</span>  <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-literal">null</span> === <span class="hljs-literal">undefined</span> <span class="hljs-comment">// =&gt; false</span>
+</code></pre>
 
                                 
                                 </section>
@@ -334,12 +346,12 @@
 
             
                 
-                <a href="../client/" class="navigation navigation-prev " aria-label="Previous page: 客户端 JS">
+                <a href="types-boolean.html" class="navigation navigation-prev " aria-label="Previous page: Boolean">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../REF.html" class="navigation navigation-next " aria-label="Next page: 参考文献">
+                <a href="types-global.html" class="navigation navigation-next " aria-label="Next page: 全局对象">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -350,7 +362,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"服务端 JS","level":"1.4","depth":1,"next":{"title":"参考文献","level":"1.5","depth":1,"path":"REF.md","ref":"REF.md","articles":[]},"previous":{"title":"客户端 JS","level":"1.3","depth":1,"path":"client/README.md","ref":"client/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"server/README.md","mtime":"2018-01-13T02:00:52.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T10:33:28.891Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"null 和 undefined","level":"1.2.2.4","depth":3,"next":{"title":"全局对象","level":"1.2.2.5","depth":3,"path":"core/types-global.md","ref":"core/types-global.md","articles":[]},"previous":{"title":"Boolean","level":"1.2.2.3","depth":3,"path":"core/types-boolean.md","ref":"core/types-boolean.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/types-null_undefined.md","mtime":"2018-01-13T06:51:02.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T10:33:28.891Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

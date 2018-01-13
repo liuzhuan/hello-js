@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>词汇结构 · GitBook</title>
+        <title>Boolean · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="types.html" />
+    <link rel="next" href="types-null_undefined.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="text.html" />
     
 
     </head>
@@ -120,7 +120,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="lexical.html">
+        <li class="chapter " data-level="1.2.1" data-path="lexical.html">
             
                 <a href="lexical.html">
             
@@ -173,7 +173,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.3" data-path="types-boolean.html">
+        <li class="chapter active" data-level="1.2.2.3" data-path="types-boolean.html">
             
                 <a href="types-boolean.html">
             
@@ -291,7 +291,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >词汇结构</a>
+        <a href=".." >Boolean</a>
     </h1>
 </div>
 
@@ -306,30 +306,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x8BCD;&#x6C47;&#x7ED3;&#x6784;">&#x8BCD;&#x6C47;&#x7ED3;&#x6784;</h2>
-<p>&#x8BCD;&#x6C47;&#x7ED3;&#x6784;&#xFF08;Lexical Structure&#xFF09;&#x8868;&#x793A;&#x67D0;&#x4E00;&#x8BED;&#x8A00;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#xFF0C;&#x6BD4;&#x5982;&#x53D8;&#x91CF;&#x540D;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#xFF0C;&#x6CE8;&#x91CA;&#x5206;&#x9694;&#x7B26;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8BED;&#x53E5;&#x4E4B;&#x95F4;&#x5982;&#x4F55;&#x5206;&#x9694;&#xFF1F;</p>
-<h3 id="&#x5B57;&#x7B26;&#x96C6;">&#x5B57;&#x7B26;&#x96C6;</h3>
-<p>ES3 &#x89C4;&#x8303;&#x8981;&#x6C42;&#x652F;&#x6301; Unicode v2.1+ &#x5B57;&#x7B26;&#x96C6;&#xFF0C;ES5 &#x652F;&#x6301; Unicode v3+ &#x5B57;&#x7B26;&#x96C6;&#x3002;</p>
-<p>JS &#x4E2D;&#x7684;&#x7A7A;&#x767D;&#x7B26;&#x53F7;&#x5305;&#x62EC;&#xFF1A;&#x666E;&#x901A;&#x7A7A;&#x683C;&#xFF08;<code>\u0020</code>&#xFF09;&#xFF0C;&#x5236;&#x8868;&#x7B26;&#xFF08;<code>\u0009</code>&#xFF09;&#xFF0C;&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;&#xFF08;<code>\u000B</code>&#xFF09;&#xFF0C;&#x6362;&#x9875;&#x7B26;&#xFF08;<code>\u000C</code>&#xFF09;&#xFF0C;&#x975E;&#x6362;&#x884C;&#x7A7A;&#x683C;&#xFF08;<code>\u00A0</code>&#xFF09;&#xFF0C;&#x5B57;&#x8282;&#x987A;&#x5E8F;&#x6807;&#x8BB0;&#xFF08;<code>\uFEFF</code>&#xFF09;&#xFF0C;&#x4EE5;&#x53CA; Unicode Z &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x3002;</p>
-<p>JS &#x5C06;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x5F53;&#x4F5C;&#x884C;&#x7ED3;&#x675F;&#x7B26;&#xFF1A;&#x6362;&#x884C;&#x7B26;&#xFF08;<code>\u000A</code>&#xFF09;&#xFF0C;&#x56DE;&#x8F66;&#xFF08;<code>\u000D</code>&#xFF09;&#xFF0C;&#x884C;&#x5206;&#x9694;&#x7B26;&#xFF08;<code>\u2028</code>&#xFF09;&#xFF0C;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#xFF08;<code>\u2029</code>&#xFF09;&#x3002;</p>
-<p>&#x5BF9;&#x4E8E;&#x5C1A;&#x672A;&#x652F;&#x6301; Unicode &#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x53EF;&#x4F7F;&#x7528; Unicode &#x8F6C;&#x6362;&#x7801;&#x8868;&#x793A; Unicode &#x5B57;&#x7B26;&#x3002;&#x5373;&#x7528; 6 &#x4E2A; ASCII &#x5B57;&#x7B26;&#x8868;&#x793A;&#x4EFB;&#x610F;&#x4E00;&#x4E2A; 16 &#x4F4D; Unicode &#x7801;&#x70B9;&#xFF08;codepoint&#xFF09;&#xFF1A;<code>\u</code> &#x5F00;&#x5934;&#xFF0C;&#x540E;&#x8DDF; 4 &#x4E2A; 16 &#x8FDB;&#x5236;&#x6570;&#x5B57;&#x3002;&#x6BD4;&#x5982; <code>&#xE9;</code> &#x7684; Unicode &#x8F6C;&#x6362;&#x7801;&#x662F; <code>\u00E9</code>&#xFF0C;&#x56E0;&#x800C;&#x5982;&#x4E0B;&#x4E24;&#x5B57;&#x7B26;&#x76F8;&#x7B49;&#xFF1A;</p>
-<pre><code class="lang-javascript"><span class="hljs-string">&quot;caf&#xE9;&quot;</span> === <span class="hljs-string">&quot;caf\u00E9&quot;</span> <span class="hljs-comment">// =&gt; true</span>
+                                <h2 id="boolean">Boolean</h2>
+<p>&#x6240;&#x6709;&#x7684;&#x6570;&#x503C;&#x5747;&#x53EF;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x503C;&#xFF0C;&#x5176;&#x4E2D;&#x4EE5;&#x4E0B;&#x6570;&#x503C;&#x8F6C;&#x6362;&#x4E3A; <code>false</code>&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-literal">undefined</span>
+<span class="hljs-literal">null</span>
+<span class="hljs-number">0</span>
+<span class="hljs-number">-0</span>
+<span class="hljs-literal">NaN</span>
+<span class="hljs-string">&quot;&quot;</span>
 </code></pre>
-<h3 id="&#x6807;&#x8BC6;&#x7B26;&#x548C;&#x5173;&#x952E;&#x5B57;">&#x6807;&#x8BC6;&#x7B26;&#x548C;&#x5173;&#x952E;&#x5B57;</h3>
-<p>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x7981;&#x6B62;&#x4F7F;&#x7528; <code>arguments</code>, <code>eval</code> &#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x540D;&#xFF0C;&#x51FD;&#x6570;&#x540D;&#x6216;&#x53C2;&#x6570;&#x540D;&#x3002;&#x1F232;&#xFE0F;</p>
-<p>JS &#x8FD8;&#x9884;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x8BB0;&#x5F97;&#x907F;&#x5F00;&#x8FD9;&#x4E9B;&#x540D;&#x79F0;&#xFF1A;</p>
-<pre><code>encodeURI   Infinity    Number  RegExp
-...
-URIError    NaN         JSON    Math
-</code></pre><h3 id="&#x53EF;&#x9009;&#x7684;&#x9017;&#x53F7;">&#x53EF;&#x9009;&#x7684;&#x9017;&#x53F7;</h3>
-<p>&#x9017;&#x53F7;&#x867D;&#x7136;&#x4E0D;&#x662F;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x5019;&#x7684;&#x9017;&#x53F7;&#x7F3A;&#x5931;&#x4F1A;&#x9020;&#x6210;&#x89E3;&#x6790;&#x9519;&#x8BEF;&#xFF1A;</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> y = x + f
-(a+b).toString()
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x4EFB;&#x4F55;&#x6570;&#x503C;&#xFF0C;&#x5747;&#x8F6C;&#x6362;&#x4E3A; <code>true</code>&#x3002;&#x7A7A;&#x5BF9;&#x8C61;&#x548C;&#x7A7A;&#x6570;&#x7EC4;&#x4E5F;&#x4E0D;&#x4F8B;&#x5916;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = []
+<span class="hljs-keyword">if</span> (arr) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Truthy&apos;</span>) <span class="hljs-comment">// =&gt; Truthy</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Falsy&apos;</span>)
+}
+
+<span class="hljs-keyword">var</span> obj = {}
+<span class="hljs-keyword">if</span> (obj) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Truthy&apos;</span>) <span class="hljs-comment">// =&gt; Truthy</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Falsy&apos;</span>)
+}
 </code></pre>
-<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x4E3A;&#xFF1A;</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> y = x + f(a+b).toString()
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x867D;&#x7136;&#x7A7A;&#x5BF9;&#x8C61;&#x548C;&#x7A7A;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x4E3A; <code>true</code>&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x548C; Boolean &#x76F4;&#x63A5;&#x6BD4;&#x8F83;&#x65F6;&#xFF0C;&#x5374;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> arr = []
+arr == <span class="hljs-literal">true</span>  <span class="hljs-comment">// =&gt; false</span>
+arr == <span class="hljs-literal">false</span> <span class="hljs-comment">// =&gt; true</span>
+
+<span class="hljs-keyword">var</span> obj = {}
+obj == <span class="hljs-literal">true</span>  <span class="hljs-comment">// =&gt; false</span>
+obj == <span class="hljs-literal">false</span> <span class="hljs-comment">// =&gt; false</span>
 </code></pre>
-<p>&#x901A;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x8BED;&#x53E5;&#x4EE5; <code>(</code>, <code>[</code>, <code>/</code>, <code>+</code>, <code>-</code> &#x5F00;&#x5934;&#xFF0C;&#x6700;&#x597D;&#x5728;&#x6700;&#x524D;&#x9762;&#x589E;&#x52A0; <code>;</code> &#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A; <code>==</code> &#x5E76;&#x4E0D;&#x4F1A;&#x5C06;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x503C;&#x3002;&#x9664;&#x4E86;&#x7A7A;&#x5BF9;&#x8C61;&#x548C;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x4EA6;&#x5982;&#x6B64;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-literal">undefined</span> == <span class="hljs-literal">false</span> <span class="hljs-comment">// =&gt; false</span>
+<span class="hljs-literal">null</span> == <span class="hljs-literal">false</span> <span class="hljs-comment">// =&gt; false</span>
+</code></pre>
 
                                 
                                 </section>
@@ -357,12 +370,12 @@ URIError    NaN         JSON    Math
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 语言核心">
+                <a href="text.html" class="navigation navigation-prev " aria-label="Previous page: 文本">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="types.html" class="navigation navigation-next " aria-label="Next page: 类型、数值和变量">
+                <a href="types-null_undefined.html" class="navigation navigation-next " aria-label="Next page: null 和 undefined">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -373,7 +386,7 @@ URIError    NaN         JSON    Math
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"词汇结构","level":"1.2.1","depth":2,"next":{"title":"类型、数值和变量","level":"1.2.2","depth":2,"path":"core/types.md","ref":"core/types.md","articles":[{"title":"Numbers","level":"1.2.2.1","depth":3,"anchor":"#numbers","path":"core/types.md","ref":"core/types.md#numbers","articles":[]},{"title":"文本","level":"1.2.2.2","depth":3,"path":"core/text.md","ref":"core/text.md","articles":[]},{"title":"Boolean","level":"1.2.2.3","depth":3,"path":"core/types-boolean.md","ref":"core/types-boolean.md","articles":[]},{"title":"null 和 undefined","level":"1.2.2.4","depth":3,"path":"core/types-null_undefined.md","ref":"core/types-null_undefined.md","articles":[]},{"title":"全局对象","level":"1.2.2.5","depth":3,"path":"core/types-global.md","ref":"core/types-global.md","articles":[]}]},"previous":{"title":"语言核心","level":"1.2","depth":1,"path":"core/README.md","ref":"core/README.md","articles":[{"title":"词汇结构","level":"1.2.1","depth":2,"path":"core/lexical.md","ref":"core/lexical.md","articles":[]},{"title":"类型、数值和变量","level":"1.2.2","depth":2,"path":"core/types.md","ref":"core/types.md","articles":[{"title":"Numbers","level":"1.2.2.1","depth":3,"anchor":"#numbers","path":"core/types.md","ref":"core/types.md#numbers","articles":[]},{"title":"文本","level":"1.2.2.2","depth":3,"path":"core/text.md","ref":"core/text.md","articles":[]},{"title":"Boolean","level":"1.2.2.3","depth":3,"path":"core/types-boolean.md","ref":"core/types-boolean.md","articles":[]},{"title":"null 和 undefined","level":"1.2.2.4","depth":3,"path":"core/types-null_undefined.md","ref":"core/types-null_undefined.md","articles":[]},{"title":"全局对象","level":"1.2.2.5","depth":3,"path":"core/types-global.md","ref":"core/types-global.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/lexical.md","mtime":"2018-01-13T02:00:52.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T10:33:28.891Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Boolean","level":"1.2.2.3","depth":3,"next":{"title":"null 和 undefined","level":"1.2.2.4","depth":3,"path":"core/types-null_undefined.md","ref":"core/types-null_undefined.md","articles":[]},"previous":{"title":"文本","level":"1.2.2.2","depth":3,"path":"core/text.md","ref":"core/text.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/types-boolean.md","mtime":"2018-01-13T10:14:28.096Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-13T10:33:28.891Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
