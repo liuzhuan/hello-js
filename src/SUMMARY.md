@@ -11,5 +11,6 @@
         - [null 和 undefined](core/types-null_undefined.md)
         - [全局对象](core/types-global.md)
 - [客户端 JS](client/README.md)
+    - [客户端本地存储](client/localstorage.md)
 - [服务端 JS](server/README.md)
 - [参考文献](REF.md)
