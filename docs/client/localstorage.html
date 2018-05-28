@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>语言核心 · GitBook</title>
+        <title>客户端本地存储 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="lexical.html" />
+    <link rel="next" href="../server/" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="uploading.html" />
     
 
     </head>
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../core/">
             
-                <a href="./">
+                <a href="../core/">
             
                     
                     语言核心
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="lexical.html">
+        <li class="chapter " data-level="1.2.1" data-path="../core/lexical.html">
             
-                <a href="lexical.html">
+                <a href="../core/lexical.html">
             
                     
                     词汇结构
@@ -133,9 +133,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="types.html">
+        <li class="chapter " data-level="1.2.2" data-path="../core/types.html">
             
-                <a href="types.html">
+                <a href="../core/types.html">
             
                     
                     类型、数值和变量
@@ -147,9 +147,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="types.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="../core/types.html">
             
-                <a href="types.html#numbers">
+                <a href="../core/types.html#numbers">
             
                     
                     Numbers
@@ -160,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.2" data-path="text.html">
+        <li class="chapter " data-level="1.2.2.2" data-path="../core/text.html">
             
-                <a href="text.html">
+                <a href="../core/text.html">
             
                     
                     文本
@@ -173,9 +173,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.3" data-path="types-boolean.html">
+        <li class="chapter " data-level="1.2.2.3" data-path="../core/types-boolean.html">
             
-                <a href="types-boolean.html">
+                <a href="../core/types-boolean.html">
             
                     
                     Boolean
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.4" data-path="types-date.html">
+        <li class="chapter " data-level="1.2.2.4" data-path="../core/types-date.html">
             
-                <a href="types-date.html">
+                <a href="../core/types-date.html">
             
                     
                     Date
@@ -199,9 +199,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.5" data-path="types-null_undefined.html">
+        <li class="chapter " data-level="1.2.2.5" data-path="../core/types-null_undefined.html">
             
-                <a href="types-null_undefined.html">
+                <a href="../core/types-null_undefined.html">
             
                     
                     null 和 undefined
@@ -212,9 +212,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.6" data-path="types-global.html">
+        <li class="chapter " data-level="1.2.2.6" data-path="../core/types-global.html">
             
-                <a href="types-global.html">
+                <a href="../core/types-global.html">
             
                     
                     全局对象
@@ -235,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../client/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../client/">
+                <a href="./">
             
                     
                     客户端 JS
@@ -249,9 +249,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../client/uploading.html">
+        <li class="chapter " data-level="1.3.1" data-path="uploading.html">
             
-                <a href="../client/uploading.html">
+                <a href="uploading.html">
             
                     
                     上传文件
@@ -262,9 +262,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../client/localstorage.html">
+        <li class="chapter active" data-level="1.3.2" data-path="localstorage.html">
             
-                <a href="../client/localstorage.html">
+                <a href="localstorage.html">
             
                     
                     客户端本地存储
@@ -336,7 +336,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >语言核心</a>
+        <a href=".." >客户端本地存储</a>
     </h1>
 </div>
 
@@ -351,7 +351,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8BED;&#x8A00;&#x6838;&#x5FC3;">&#x8BED;&#x8A00;&#x6838;&#x5FC3;</h1>
+                                <h1 id="windowlocalstorage">window.localStorage</h1>
+<p>&#x53EA;&#x8BFB;&#x5C5E;&#x6027; <code>localStorage</code> &#x5141;&#x8BB8;&#x8BFB;&#x53D6;&#x540C;&#x57DF;&#x540D;&#x4E0B;&#x7684; <code>Storage</code> &#x5BF9;&#x8C61;&#x3002;&#x540C; <code>sessionStorage</code> &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x66F4;&#x6301;&#x4E45;&#x3002;<code>sessionStorage</code> &#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x540E;&#x5C31;&#x4F1A;&#x6E05;&#x7A7A;&#x3002;</p>
+<p>&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x5207;&#x8BB0;&#xFF0C;<code>localStorage</code> &#x548C; <code>sessionStorage</code> &#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x5747;&#x5BF9;&#x5E94;&#x4E0E;&#x9875;&#x9762;&#x7684;&#x534F;&#x8BAE;&#x3002;</p>
+<h2 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h2>
+<pre><code class="lang-javascript">myStorage = <span class="hljs-built_in">window</span>.localStorage
+</code></pre>
+<h2 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h2>
+<pre><code class="lang-javascript"><span class="hljs-comment">// set item</span>
+localStorage.setItem(<span class="hljs-string">&apos;myCat&apos;</span>, <span class="hljs-string">&apos;Tom&apos;</span>)
+localStorage.myCat = <span class="hljs-string">&apos;Tom&apos;</span>
+localStorage[<span class="hljs-string">&apos;myCat&apos;</span>] = <span class="hljs-string">&apos;Tom&apos;</span>
+
+<span class="hljs-comment">// get item</span>
+<span class="hljs-keyword">var</span> cat = localStorage.getItem(<span class="hljs-string">&apos;myCat&apos;</span>)
+
+<span class="hljs-comment">// remove item</span>
+localStorage.removeItem(<span class="hljs-string">&apos;myCat&apos;</span>)
+</code></pre>
+<h1 id="windowsessionstorage">window.sessionStorage</h1>
+<p>&#x51E0;&#x4E4E;&#x4E0E; <code>localStorage</code> &#x76F8;&#x540C;&#xFF0C;&#x6545;&#x7565;&#x3002;</p>
+<h2 id="ref">REF</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">window.localStorage - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" target="_blank">Using the Web Storage API - MDN</a></li>
+</ul>
 
                                 
                                 </section>
@@ -379,12 +404,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                <a href="uploading.html" class="navigation navigation-prev " aria-label="Previous page: 上传文件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="lexical.html" class="navigation navigation-next " aria-label="Next page: 词汇结构">
+                <a href="../server/" class="navigation navigation-next " aria-label="Next page: 服务端 JS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -395,7 +420,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"语言核心","level":"1.2","depth":1,"next":{"title":"词汇结构","level":"1.2.1","depth":2,"path":"core/lexical.md","ref":"core/lexical.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"core/README.md","mtime":"2018-01-05T16:14:33.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T15:40:24.931Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"客户端本地存储","level":"1.3.2","depth":2,"next":{"title":"服务端 JS","level":"1.4","depth":1,"path":"server/README.md","ref":"server/README.md","articles":[]},"previous":{"title":"上传文件","level":"1.3.1","depth":2,"path":"client/uploading.md","ref":"client/uploading.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"client/localstorage.md","mtime":"2018-05-25T12:31:29.757Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T15:40:24.931Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
