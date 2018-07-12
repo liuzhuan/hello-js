@@ -10,6 +10,8 @@
         - [Date](core/types-date.md)
         - [null 和 undefined](core/types-null_undefined.md)
         - [全局对象](core/types-global.md)
+    - 数组
+        - [Sort 排序](core/array/sort.md)
 - [客户端 JS](client/README.md)
     - [上传文件](client/uploading.md)
     - [客户端本地存储](client/localstorage.md)
