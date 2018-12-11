@@ -11,6 +11,7 @@
         - [null 和 undefined](core/types-null_undefined.md)
         - [全局对象](core/types-global.md)
         - [Object](core/object.md)
+        - [Array](core/array.md)
         - [JSON 对象](core/JSON.md)
     - 数组
         - [Sort 排序](core/array/sort.md)
