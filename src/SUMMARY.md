@@ -20,5 +20,6 @@
 - [客户端 JS](client/README.md)
     - [上传文件](client/uploading.md)
     - [客户端本地存储](client/localstorage.md)
+    - [事件](client/event.md)
 - [服务端 JS](server/README.md)
 - [参考文献](REF.md)
