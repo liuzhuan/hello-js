@@ -23,14 +23,50 @@ object1 === object2
 // => true
 ```
 
-真实世界的[样例](https://github.com/vuejs/vue/blob/628c1b7f5b298e13975d880c73e8fc2893628c2e/src/shared/util.js#L3)：
+真实世界的[例子](https://github.com/vuejs/vue/blob/628c1b7f5b298e13975d880c73e8fc2893628c2e/src/shared/util.js#L3)：
 
 ```js
 // vuejs/vue/src/shared/util.js
 export const emptyObject = Object.freeze({})
 ```
 
+## create()
 
+[mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
+`Object.create()` 使用现有对象当作原型链，创建新对象。
 
+```js
+// Object.create(proto[, propertiesObject])
+const person = {
+    isHuman: false,
+    printIntorduction: function() {
+        console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`)
+    }
+}
+
+const me = Object.create(person)
+
+me.name = "Matthew"
+me.isHuman = true
+
+me.printIntroduction()
+```
+
+现实世界的[例子](https://github.com/vuejs/vue/blob/d780dd2e2adcf71f40c086055a659a9a2b4a8282/src/shared/util.js#L102)：
+
+```js
+// vuejs/vue/src/shared/util.js
+export function makeMap(str, expectsLowerCase) {
+    const map = Object.create(null)
+    const list = str.split(',')
+    for (let i = 0; i < list.length; i++) {
+        map[list[i]] = true
+    }
+    
+    return expectsLowerCase
+    	? val => map[val.toLowerCase()]
+    	: val => map[val]
+}
+```
 
