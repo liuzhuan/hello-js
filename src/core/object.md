@@ -70,3 +70,69 @@ export function makeMap(str, expectsLowerCase) {
 }
 ```
 
+## defineProperty()
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+
+静态方法 `Object.defineProperty()` 在对象上直接创建新属性，精确控制新属性的特性：
+
+```js
+// Object.defineProperty(obj, prop, descriptor)
+var o = {}
+
+Object.defineProperty(o, 'a', {
+    value: 37,
+    writable: true,
+    enumerable: true,
+    configurable: true
+})
+
+var bValue = 38
+Object.defineProperty(o, 'b', {
+    set() { return bValue },
+    set(newValue) { bValue = newValue },
+    enumerable: true,
+    configurable: true
+})
+```
+
+通过赋值创建的普通属性（如 `obj.a = 'hello'`），可枚举（通过`for ... in` 或 `Object.keys`），可修改，可删除。
+
+而通过 `Object.defineProperty()`创建的属性，特性是可以通过属性描述符（*property descriptors*）配置的，比如是否可修改，是否可删除，是否可写等。
+
+属性描述符分为两种风格：
+
+1. 数据描述符 *data descriptors*，拥有 `value` 属性
+2. 存取器描述符 *accessor descriptors*，拥有 `getter-setter` 函数对
+
+描述符只能二选一，鱼和熊掌不可兼得。
+
+两种风格共有的键值：
+
+1. `configurable`，默认 `false`。若为 `true`，则该属性可修改，可删除。
+2. `enumerable`，默认 `false`。若为 `true`，则该属性可枚举。
+
+数据描述符特有的键值：
+
+1. `value`
+2. `writable`
+
+存取器描述符特有的键值：
+
+1. `get`
+2. `set`
+
+真实世界的[例子](https://github.com/vuejs/vue/blob/dev/src/core/util/env.js#L25)：
+
+```js
+// vuejs/vue/src/core/util/env.js
+const opts = {}
+Object.defineProperty(opts, 'passive', {
+    get() {
+        supportsPassive = true
+    }
+})
+```
+
+
+
