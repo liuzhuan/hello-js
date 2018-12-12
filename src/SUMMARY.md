@@ -23,5 +23,6 @@
     - [事件](client/event.md)
     - [macrotask 和 microtask](client/tasks.md)
     - [Channel Messaging API](client/channel-messaging-api.md)
+    - [Web Performance API](client/web-perf.md)
 - [服务端 JS](server/README.md)
 - [参考文献](REF.md)
