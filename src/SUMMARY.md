@@ -22,5 +22,6 @@
     - [客户端本地存储](client/localstorage.md)
     - [事件](client/event.md)
     - [macrotask 和 microtask](client/tasks.md)
+    - [Channel Messaging API](client/channel-messaging-api.md)
 - [服务端 JS](server/README.md)
 - [参考文献](REF.md)
