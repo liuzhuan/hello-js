@@ -25,11 +25,61 @@ event loop 有以下细节：
 
 - 两个 task 队列都在 event loop 外，任务添加和任务处理行为分离。在 event loop 内负责执行任务（并从队列里删除），而在 event loop 外添加任务。
 - 两种类型的 task 同时只能执行一个，因为 JavaScript 基于单线程模型。
+- 所有的 microtask 都应在下次渲染前执行完，因为其目的就是在渲染前更新应用状态。
+- 帧速率达到 60 fps，可以认为是平滑运动。因此单个任务和由该任务生成的所有 microtask 应该在 16ms 内完成。
 
-[stackoverflow](https://stackoverflow.com/questions/25915634/difference-between-microtask-and-macrotask-within-an-event-loop-context)
+[Difference between microtask and macrotask within an event loop context | stackoverflow](https://stackoverflow.com/questions/25915634/difference-between-microtask-and-macrotask-within-an-event-loop-context), by *NicBright* & *Levi Lindsey*, 2014/09/19
 
-[setImmediate.js](https://github.com/YuzuJS/setImmediate#macrotasks-and-microtasks)
+一个事件循环中，只能执行 macrotask 队列的一个任务，执行完毕，将处理所有的 microtask。
+
+基本上，如果想尽快执行一个异步函数，应当使用 microtask。否则，使用 macrotask。
+
+例子：
+
+- **macrotask**: setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering
+- **microtask**: process.nextTick, Promises, Object.observe, MutationObserver
+
+[YuzuJS/setImmediate.js](https://github.com/YuzuJS/setImmediate#macrotasks-and-microtasks)
+
+> A cross-browser implementation of the new setImmediate API
+
+`setImmediate` 和 `clearImmediate` 是微软的一个提案，用于提供更高效的异步回调机制，优于 `setTimeout(..., 0)`。
 
 [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/), by *Jake Archibald*, 2015/08/17
 
-TODO
+```js
+console.log('script start')
+
+setTimeout(function() {
+    console.log('setTimeout')
+}, 0)
+
+Promise.resolve().then(function() {
+    console.log('promise1')
+}).then(function() {
+    console.log('promise2')
+})
+
+console.log('script end')
+```
+
+将输出如下内容：
+
+```js
+script start
+script end
+promise1
+promise2
+setTimeout
+```
+
+每个线程都有自己的 event loop，因此每个 web worker 都有自己的 loop，因此可以独立执行。但是相同域名下的 window 共享一个 loop。
+
+交互的演示将 Tasks(`macrotask`), Microtasks 和 JS stack 的关系描绘的很直观。
+
+[Vue.js 升级踩坑小记](https://github.com/DDFE/DDFE-blog/issues/24)，黄轶，2017/11/28
+
+详细描述了 `Vue.nextTick` 的内部实现原理，可读性很强。
+
+[JavaScript 运行机制详解：再谈 Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)，阮一峰，2014/10/08
+
