@@ -19,3 +19,5 @@ To read
 [Navigation Timing](https://www.w3.org/TR/navigation-timing/), by *Zhiheng Wang*, 2012/12/17
 
 To Read
+
+[Navigation Timing Level 2](https://w3c.github.io/navigation-timing/), by *Ilya Grigorik* etc, 2018/11/30
