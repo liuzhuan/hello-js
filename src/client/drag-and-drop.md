@@ -24,13 +24,12 @@
 
 | 事件 | On Event 处理器 | 描述 |
 | --- | --- | --- |
-| drag | ondrag | 当元素或文本拖动时 |
+| dragstart | ondragstart | 当用户开始拖动元素或文本 |
 | dragend | ondragend | 当拖动操作结束时 |
 | dragenter | ondragenter | 当拖动的元素进入合法的放置目标 |
 | dragexit | ondragexit | 当元素不再是拖放操作的立即选中目标 |
 | dragleave | ondragleave | 当拖动的元素离开合法的放置目标 |
 | dragover | ondragover | 当一个元素或文本拖放经过一个合法的放置目标 |
-| dragstart | ondragstart | 当用户开始拖动元素或文本 |
 | drop | ondrop | 当元素或文本放置到合法的放置目标 |
 
 推荐的拖放类型
