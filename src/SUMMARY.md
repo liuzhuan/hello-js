@@ -25,5 +25,6 @@
     - [Channel Messaging API](client/channel-messaging-api.md)
     - [Web Performance API](client/web-perf.md)
     - [URL 对象](client/url-api.md)
+    - [HTML 拖放](client/drag-and-drop.md)
 - [服务端 JS](server/README.md)
 - [参考文献](REF.md)
