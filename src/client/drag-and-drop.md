@@ -19,6 +19,7 @@
 15. 浏览器默认会阻止所有元素的拖放效果。除非在元素上指定 `ondragover` 和 `ondrop` 事件侦听函数。
 16. 拖放事件中的 `preventDefault()` 可以防止额外的事件处理，比如触摸事件或鼠标事件。
 17. 通常使用 `getData()` 获取拖放元素。
+18. 对于拖动目标，常用的事件是 `ondragstart` 和 `ondragend`；对于放置区域，最常用的事件是 `ondrop` 和 `ondragover`。
 
 所有的拖放事件
 
