@@ -48,3 +48,34 @@ if (inBrowser) {
     } catch (e) {}
 }
 ```
+
+## FocusEvent
+
+[blur](https://developer.mozilla.org/en-US/docs/Web/Events/blur)
+
+1. 当元素失去焦点时，抛出 `blur` 事件。它和 `focusout` 区别是，后者可以冒泡。
+2. 如果使用 `blur` 作为代理，要么使用 `focusout` 事件，要么将 `addEventListener()` 的 `useCapture` 设为 `true`。
+3. [FocusEvent](https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent) 表示焦点相关的事件，包括 `focus`, `blur`, `focusin`, `focusout`。
+4. FocusEvent 的继承关系是 `Event <-- UIEvent <-- FocusEvent`。
+5. `focus` 和 `focusin` 事件类似，只是后者可以冒泡。
+
+### 代码片段：
+
+```html
+<form id="form">
+    <input type="text" placeholder="text input">
+    <input type="password" placeholder="password">
+</form>
+```
+
+```js
+var form = document.querySelector("#form");
+
+form.addEventListener('focus', function(e) {
+    e.target.style.background = 'pink';
+}, true);
+
+form.addEventListener('blur', function(e) {
+    e.target.style.background = '';
+}, true);
+```
